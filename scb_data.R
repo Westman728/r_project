@@ -6,7 +6,7 @@ library(tidyr)
 library(writexl)
 library(readxl)
 
-d2 <- pxweb_interactive("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/PersBilarDrivMedel")
+d2 <- pxweb_interactive("https://api.scb.se/OV0104/v1/doris/sv/ssd/START/TK/TK1001/TK1001A/PersBilarDrivMedel")            # Interactive user interface. For automatization, use json queries.
 
 df2 <- subset(d2$data)
 View(df2)
