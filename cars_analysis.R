@@ -10,7 +10,7 @@ bildata <- read_excel(file, range = "A1:I2736")
 sapply(bildata, class)
 sum(is.na(bildata))
 which(is.na(bildata), arr.ind = TRUE)          # Find where NA's is
-bildata[is.na(bildata)] <- "tvåhjulsdriven"    # Only works with specific these specific NA's
+bildata[is.na(bildata)] <- "tvåhjulsdriven"    # Only works with these specific NA's
 
 
 
