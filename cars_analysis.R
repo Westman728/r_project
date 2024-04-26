@@ -56,6 +56,11 @@ coef_names <- rownames(summary_lm$coefficients)
 coef_print <- paste(coef_names, coef_fix, sep = ":")
 print(coef_print)
 
+co <- coef(lm.fit)              # A look at how much % the variables change outcome
+print(co)
+exp_co <- exp(co)
+round(exp_co, 4)
+
 #-------------------------- Setting up correlation matrix
 bildata_dummy <- model.matrix(~., bildata)
 bildata_dummy <- bildata_dummy[, -1]  # Remove the intercept
